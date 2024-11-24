@@ -1,0 +1,23 @@
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    width: 22vh;
+    height: 93vh;
+    border-right: 3px solid black;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-text {
+    text-align: center;
+    margin: 10% 0;
+    font-size: 28px;
+    
+}
+
+.menu-text:hover {
+    cursor: pointer;
+}
