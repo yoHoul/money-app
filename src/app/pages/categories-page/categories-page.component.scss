@@ -10,7 +10,7 @@
 .networth {
     display: flex;
     flex-direction: column;
-    width: 63.8vh;
+    width: 35%;
 }
 
 .date-picker {
@@ -26,7 +26,7 @@
 .categories {
     display: flex;
     flex-direction: column;
-    width: 115vh;
+    width: 65%;
     padding-right: 6vh;
 }
 
@@ -34,5 +34,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 20px;
 }
