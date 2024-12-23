@@ -7,6 +7,9 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { SidebarComponent } from './core/components/sidebar/sidebar.component';
 import { CategoriesPageComponent } from './pages/categories-page/categories-page.component';
 import { CategoryCardComponent } from './modules/components/category-card/category-card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './core/services/api.service';
+import { CardsService } from './core/services/cards.service';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,9 @@ import { CategoryCardComponent } from './modules/components/category-card/catego
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ApiService, CardsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
