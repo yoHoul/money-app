@@ -1,0 +1,17 @@
+{
+"id": 1,
+"cards": [
+        {
+            "CardName": "Restaurant Card",
+            "CardLogo": "ForkAndKnife",
+            "CardColor": "Pink",
+            "CardWorth": 500
+        },
+        {
+            "CardName": "Movie Ticket Card",
+            "CardLogo": "Ticket",
+            "CardColor": "Blue",
+            "CardWorth": 300
+        }
+    ]
+}
