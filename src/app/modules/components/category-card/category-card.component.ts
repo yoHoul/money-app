@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CardsService } from 'src/app/core/services/cards.service'
+import { ApiService } from 'src/app/core/services/api.service'
 
 @Component({
   selector: 'app-category-card',
@@ -8,8 +8,7 @@ import { CardsService } from 'src/app/core/services/cards.service'
 })
 export class CategoryCardComponent {
 
-  constructor(public CardsService: CardsService) { 
-    const cardsUI = this.CardsService.cards
-    console.log(cardsUI)
+  constructor() { 
+
   }
 }

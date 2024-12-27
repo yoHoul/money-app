@@ -8,19 +8,9 @@
         <span class="date-picker-text">Месяц</span>
       </button>
     <div class="cards-container">
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
-      <app-category-card></app-category-card>
+      <div *ngFor="let card of this.CategoriesUI" class="card-container">
+        <span></span>
+      </div>
     </div>
   </div>
 </div>
