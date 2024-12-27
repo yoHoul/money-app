@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { ReplaySubject, Subscription, takeUntil } from 'rxjs';
 import { ApiService } from 'src/app/core/services/api.service'
-import { ICards, ICard } from 'src/app/shared/types/i-category-card';
+import { IUser, ICard } from 'src/app/shared/types/i-category-card';
 
 
 @Component({
@@ -9,9 +9,13 @@ import { ICards, ICard } from 'src/app/shared/types/i-category-card';
   templateUrl: './categories-page.component.html',
   styleUrls: ['./categories-page.component.scss']
 })
+
 export class CategoriesPageComponent implements OnDestroy {
   
-  CategoriesUI: ICards[] = [];
+  CategoriesUI: IUser[] = [];
+  Cards: ICard[] = [];
+
+  walletType: string = '₽';
 
 
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
@@ -20,26 +24,28 @@ export class CategoriesPageComponent implements OnDestroy {
   constructor(public ApiService: ApiService) { 
     this.subscription = this.ApiService.getAllCards().pipe(takeUntil(this.destroyed$)).subscribe(
       (res) => {this.CategoriesUI = res;
-      this.initData(this.CategoriesUI)
+      this.initData(this.CategoriesUI, 1)
       }
     )
-
   }
 
 
-  initData(config: ICards[]) {
-    const allCards = config
-    .filter((item) => item.cards !== null) // Фильтруем элементы с null в cards
-    .flatMap((item) => item.cards as ICard[]); // Извлекаем и объединяем массивы cards
-
-  if (allCards.length === 0) {
-    console.error('Нет доступных карточек');
-    return;
+  initData(config: IUser[], id: number) {
+    this.Cards = config
+    .filter((item) => item.id == id)
+    .flatMap((item) => item.cards as ICard[]);
+    console.log('Cards:', this.Cards);
   }
 
-  console.log('Все cards:', allCards);
+  getCardImg(CardLogo: string, CardColor: string) {
+    
+  }
 
+  getCardNetworth(CardWorth: any) {
 
+  }
+
+  getColor(color: string) {
     
   }
 
