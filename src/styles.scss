@@ -1,4 +1,9 @@
-html, body {
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat.ttf');
+}
+
+html, body, app-root {
   display: flex;
   flex-direction: column;
   margin: 0;

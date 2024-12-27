@@ -1,6 +1,6 @@
 <div class="categories-container">
   <div class="networth">
-    123
+    тут типо будет круговая диограмма такая бррр *bassdrop*
   </div>
   <div class="categories">
       <button class="date-picker">
@@ -8,9 +8,20 @@
         <span class="date-picker-text">Месяц</span>
       </button>
     <div class="cards-container">
-      <div *ngFor="let card of this.CategoriesUI" class="card-container">
-        <span></span>
+
+      <div *ngFor="let card of this.Cards" class="card-container">
+        <p class="card-title">{{ card.CardName }}</p>
+        <div class="card-img-container">
+
+        </div>
+        <div class="card-networth">
+          <span class="networth-title">{{ card.CardWorth }}</span> {{ walletType }}
+        </div>
+        <div class="card-button">
+          <p class="button-text">Добавить</p>
+        </div>
       </div>
+
     </div>
   </div>
 </div>

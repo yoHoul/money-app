@@ -1,4 +1,4 @@
-export interface ICards {
+export interface IUser {
     id: number;
     cards: ICard[] | null;
 }
@@ -8,6 +8,11 @@ export interface ICard {
     CardLogo: string;
     CardColor: string;
     CardWorth: number;
+}
+
+export interface logs {
+    date: string;
+    value: number;
 }
 
 export enum CardLogo {
