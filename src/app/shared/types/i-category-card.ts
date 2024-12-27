@@ -1,12 +1,12 @@
 export interface ICards {
     id: number;
-    cards: card[] | null;
+    cards: ICard[] | null;
 }
 
-export interface card {
+export interface ICard {
     CardName: string;
-    CardLogo: CardLogo;
-    CardColor: CardColor;
+    CardLogo: string;
+    CardColor: string;
     CardWorth: number;
 }
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { card, ICards } from 'src/app/shared/types/i-category-card';
+import { ICard, ICards } from 'src/app/shared/types/i-category-card';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,7 @@ import { card, ICards } from 'src/app/shared/types/i-category-card';
 export class CardsService {
   
   public allCards: ICards[] = [];
-  public cards: card[] | null = null;
+  public cards: ICard[] | null = null;
 
   constructor() { }
 

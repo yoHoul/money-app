@@ -37,3 +37,12 @@
     justify-content: flex-start;
     gap: 20px;
 }
+
+.card-container {
+    width: 20vh;
+    min-width: 138px;
+    height: 25vh;
+    min-height: 174px;
+    border: 3px solid black;
+    border-radius: 24px;
+}
