@@ -6,55 +6,91 @@
                 "CardName": "Еда",
                 "CardLogo": "ForkAndKnife",
                 "CardColor": "Pink",
-                "CardWorth": 500
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 100 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 543 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 234 }
+                  ]
             },
             {
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 436 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 234 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 876 }
+                  ]
             },
             {
                 "CardName": "eshkere",
                 "CardLogo": "Ticket",
-                "CardColor": "Blue",
-                "CardWorth": 300
+                "CardColor": "Red",
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 678 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 543 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 654 }
+                  ]
             },
             {
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 234 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 765 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 345 }
+                  ]
             },
             {
                 "CardName": "eshkere",
                 "CardLogo": "Ticket",
-                "CardColor": "Blue",
-                "CardWorth": 300
+                "CardColor": "Green",
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 987 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 365 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 154 }
+                  ]
+            },
+            {
+                "CardName": "Movie Ticket",
+                "CardLogo": "Ticket",
+                "CardColor": "Red",
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 264 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 257 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 234 }
+                  ]
+            },
+            {
+                "CardName": "eshkere",
+                "CardLogo": "Ticket",
+                "CardColor": "Black",
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 564 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 543 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 987 }
+                  ]
             },
             {
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 234 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 654 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 675 }
+                  ]
             },
             {
                 "CardName": "eshkere",
                 "CardLogo": "Ticket",
-                "CardColor": "Blue",
-                "CardWorth": 300
-            },
-            {
-                "CardName": "Movie Ticket",
-                "CardLogo": "Ticket",
-                "CardColor": "Blue",
-                "CardWorth": 300
-            },
-            {
-                "CardName": "eshkere",
-                "CardLogo": "Ticket",
-                "CardColor": "Blue",
-                "CardWorth": 300
+                "CardColor": "Green",
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 432 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 786 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 565 }
+                  ]
             }
         ]
     },
@@ -65,55 +101,91 @@
                 "CardName": "Кушанье",
                 "CardLogo": "ForkAndKnife",
                 "CardColor": "Black",
-                "CardWorth": 400
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 325 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 765 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 453 }
+                  ]
             },
             {
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Red",
-                "CardWorth": 200
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 872 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 548 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 327 }
+                  ]
             },
             {
                 "CardName": "dopdopes",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 369 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 247 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 926 }
+                  ]
             },
             {
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 591 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 915 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 636 }
+                  ]
             },
             {
                 "CardName": "eshkere",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 434 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 901 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 427 }
+                  ]
             },
             {
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 578 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 927 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 825 }
+                  ]
             },
             {
                 "CardName": "eshkere",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 285 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 250 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 400 }
+                  ]
             },
             {
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 258 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 357 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 999 }
+                  ]
             },
             {
                 "CardName": "eshkere",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
-                "CardWorth": 300
+                "CardStory": [
+                    { "date": "2024-01-28T14:30:00Z", "value": 111 },
+                    { "date": "2024-01-27T14:30:00Z", "value": 222 },
+                    { "date": "2024-01-29T14:30:00Z", "value": 333 }
+                  ]
             }
         ]
     }
