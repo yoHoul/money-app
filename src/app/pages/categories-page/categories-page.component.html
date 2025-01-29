@@ -9,13 +9,15 @@
       </button>
     <div class="cards-container">
 
-      <div *ngFor="let card of this.Cards" class="card-container">
-        <p class="card-title">{{ card.CardName }}</p>
+      <div *ngFor="let categories of CategoriesUI" class="card-container">
+        <p class="card-title">{{ categories.CardName }}</p>
         <div class="card-img-container">
-
+          <div class="img-back" [ngStyle]="{'background-color': getColor(categories.CardColor, 'background')}">
+            <img [src]="getCardImg(categories.CardLogo)" alt="">
+          </div>
         </div>
         <div class="card-networth">
-          <span class="networth-title">{{ card.CardWorth }}</span> {{ walletType }}
+          <span class="networth-title" [ngStyle]="{'color': getColor(categories.CardColor, 'foreground')}"> {{ categories.networth }} {{ walletType }}</span>
         </div>
         <div class="card-button">
           <p class="button-text">Добавить</p>

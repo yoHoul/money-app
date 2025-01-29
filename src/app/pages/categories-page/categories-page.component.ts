@@ -1,8 +1,6 @@
-import { Component, OnDestroy } from '@angular/core';
-import { ReplaySubject, Subscription, takeUntil } from 'rxjs';
-import { ApiService } from 'src/app/core/services/api.service'
-import { IUser, ICard } from 'src/app/shared/types/i-category-card';
-
+import { Component, Input, OnDestroy, SimpleChanges } from '@angular/core';
+import { IUser, ICard, ICardStory, ICategories } from 'src/app/shared/types/i-category-card';
+import { foregroundColor,backgroundColor } from '../../../assets/styles/categoriesStyles'
 
 @Component({
   selector: 'app-categories-page',
@@ -12,46 +10,72 @@ import { IUser, ICard } from 'src/app/shared/types/i-category-card';
 
 export class CategoriesPageComponent implements OnDestroy {
   
-  CategoriesUI: IUser[] = [];
-  Cards: ICard[] = [];
+  @Input() Cards: ICard[] = [];
 
   walletType: string = '₽';
+  CategoriesUI: ICategories[] = [];
 
+  constructor() {}
 
-  private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
-  private subscription: Subscription;
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['Cards']) {
+      this.initWidget(this.Cards);
+    }
+  }
 
-  constructor(public ApiService: ApiService) { 
-    this.subscription = this.ApiService.getAllCards().pipe(takeUntil(this.destroyed$)).subscribe(
-      (res) => {this.CategoriesUI = res;
-      this.initData(this.CategoriesUI, 1)
+  initWidget(data: ICard[]) {
+    this.CategoriesUI = data.map(card => ({
+      ...card,
+      networth: this.getCardNetworth(card.CardStory)
+    }))
+    console.log(this.CategoriesUI);
+  }
+
+  getCardNetworth(CardStory: ICardStory[] | null) {
+    let networth = 0;
+    if(CardStory == null) {
+      return networth;
+    }
+    for(let record of CardStory) {
+      networth += record.value;
+    }
+    return networth
+  }
+
+  getCardImg(CardLogo: string) {
+  }
+
+  getColor(color: string, place: string) {
+    if(place == 'foreground'){
+      switch(color){
+        case 'Pink':
+          return foregroundColor.Pink
+        case 'Blue':
+          return foregroundColor.Blue
+        case 'Green':
+          return foregroundColor.Green
+        case 'Red':
+          return foregroundColor.Red
+        case 'Black':
+          return foregroundColor.Black
       }
-    )
+    }
+    if(place == 'background'){
+      switch(color){
+        case 'Pink':
+          return backgroundColor.Pink
+        case 'Blue':
+          return backgroundColor.Blue
+        case 'Green':
+          return backgroundColor.Green
+        case 'Red':
+          return backgroundColor.Red
+        case 'Black':
+          return backgroundColor.Black
+      }
+    }
+    return foregroundColor.Black
   }
 
-
-  initData(config: IUser[], id: number) {
-    this.Cards = config
-    .filter((item) => item.id == id)
-    .flatMap((item) => item.cards as ICard[]);
-    console.log('Cards:', this.Cards);
-  }
-
-  getCardImg(CardLogo: string, CardColor: string) {
-    
-  }
-
-  getCardNetworth(CardWorth: any) {
-
-  }
-
-  getColor(color: string) {
-    
-  }
-
-
-  ngOnDestroy(): void {
-    this.destroyed$.next(true);
-    this.destroyed$.complete();
-  }
+  ngOnDestroy(): void {}
 }
