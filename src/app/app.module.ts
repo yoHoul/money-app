@@ -8,6 +8,7 @@ import { SidebarComponent } from './core/components/sidebar/sidebar.component';
 import { CategoriesPageComponent } from './pages/categories-page/categories-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './core/services/api.service';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ApiService } from './core/services/api.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxEchartsModule.forRoot({ echarts: () => import('echarts')})
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

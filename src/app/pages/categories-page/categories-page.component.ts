@@ -14,6 +14,8 @@ export class CategoriesPageComponent implements OnDestroy {
 
   walletType: string = '₽';
   CategoriesUI: ICategories[] = [];
+  totalEarn: number = 0;
+  totalSpend: number = 123;
 
   constructor() {}
 
@@ -28,7 +30,9 @@ export class CategoriesPageComponent implements OnDestroy {
       ...card,
       networth: this.getCardNetworth(card.CardStory)
     }))
-    console.log(this.CategoriesUI);
+    for(let record of this.CategoriesUI) {
+      this.totalEarn += record.networth; //что-то придумать с этой хуетой
+    }
   }
 
   getCardNetworth(CardStory: ICardStory[] | null) {
