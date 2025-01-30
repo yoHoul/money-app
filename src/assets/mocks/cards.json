@@ -14,7 +14,7 @@
             },
             {
                 "CardName": "Movie Ticket",
-                "CardLogo": "Ticket",
+                "CardLogo": "ForkAndKnife",
                 "CardColor": "Blue",
                 "CardStory": [
                     { "date": "2024-01-28T14:30:00Z", "value": 436 },
@@ -34,7 +34,7 @@
             },
             {
                 "CardName": "Movie Ticket",
-                "CardLogo": "Ticket",
+                "CardLogo": "ForkAndKnife",
                 "CardColor": "Blue",
                 "CardStory": [
                     { "date": "2024-01-28T14:30:00Z", "value": 234 },
@@ -64,7 +64,7 @@
             },
             {
                 "CardName": "eshkere",
-                "CardLogo": "Ticket",
+                "CardLogo": "ForkAndKnife",
                 "CardColor": "Black",
                 "CardStory": [
                     { "date": "2024-01-28T14:30:00Z", "value": 564 },
