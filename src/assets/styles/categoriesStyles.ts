@@ -7,14 +7,14 @@ export enum foregroundColor {
 }
 
 export enum backgroundColor {
-    Pink = '#ffc7fd',
-    Blue = '#c8c7ff',
-    Green = '#adffb6',
-    Red = '#ffc7c7',
-    Black = '#bdbdbd'
+    Pink = '#ff00d532',
+    Blue = '#1500ff32',
+    Green = '#00ff0932',
+    Red = '#ff000032',
+    Black = '#0003'
 }
 
 export enum CardLogo {
-    ForkAndKnife = 'ForkAndKnife',
-    Ticket = 'Ticket'
+    ForkAndKnife = '../../../assets/cardImg/forkAndKnife.svg',
+    Ticket = '../../../assets/cardImg/ticket.svg'
 }

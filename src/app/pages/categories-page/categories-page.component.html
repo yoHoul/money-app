@@ -13,7 +13,7 @@
         <p class="card-title">{{ categories.CardName }}</p>
         <div class="card-img-container">
           <div class="img-back" [ngStyle]="{'background-color': getColor(categories.CardColor, 'background')}">
-            <img [src]="getCardImg(categories.CardLogo)" alt="">
+            <img class="card-img" [src]="getCardImg(categories.CardLogo)" alt="">
           </div>
         </div>
         <div class="card-networth">

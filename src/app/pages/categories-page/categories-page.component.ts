@@ -1,6 +1,6 @@
 import { Component, Input, OnDestroy, SimpleChanges } from '@angular/core';
 import { IUser, ICard, ICardStory, ICategories } from 'src/app/shared/types/i-category-card';
-import { foregroundColor,backgroundColor } from '../../../assets/styles/categoriesStyles'
+import { foregroundColor,backgroundColor,CardLogo } from '../../../assets/styles/categoriesStyles'
 
 @Component({
   selector: 'app-categories-page',
@@ -42,39 +42,20 @@ export class CategoriesPageComponent implements OnDestroy {
     return networth
   }
 
-  getCardImg(CardLogo: string) {
+  getCardImg(image: string) {
+    const imageMap = {
+      ForkAndKnife: CardLogo.ForkAndKnife,
+      Ticket: CardLogo.Ticket
+    }
+    return imageMap[image as keyof typeof CardLogo]
   }
 
-  getColor(color: string, place: string) {
-    if(place == 'foreground'){
-      switch(color){
-        case 'Pink':
-          return foregroundColor.Pink
-        case 'Blue':
-          return foregroundColor.Blue
-        case 'Green':
-          return foregroundColor.Green
-        case 'Red':
-          return foregroundColor.Red
-        case 'Black':
-          return foregroundColor.Black
-      }
-    }
-    if(place == 'background'){
-      switch(color){
-        case 'Pink':
-          return backgroundColor.Pink
-        case 'Blue':
-          return backgroundColor.Blue
-        case 'Green':
-          return backgroundColor.Green
-        case 'Red':
-          return backgroundColor.Red
-        case 'Black':
-          return backgroundColor.Black
-      }
-    }
-    return foregroundColor.Black
+  getColor(color: string, place: 'foreground' | 'background') {
+    const colorMap = {
+      foreground: foregroundColor,
+      background: backgroundColor
+    };
+    return colorMap[place][color as keyof typeof foregroundColor] ?? foregroundColor.Black;
   }
 
   ngOnDestroy(): void {}
