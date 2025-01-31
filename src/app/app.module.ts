@@ -6,24 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { SidebarComponent } from './core/components/sidebar/sidebar.component';
 import { CategoriesPageComponent } from './pages/categories-page/categories-page.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ApiService } from './core/services/api.service';
 import { NgxEchartsModule } from 'ngx-echarts';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    SidebarComponent,
-    CategoriesPageComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgxEchartsModule.forRoot({ echarts: () => import('echarts')})
-  ],
-  providers: [ApiService],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        SidebarComponent,
+        CategoriesPageComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        NgxEchartsModule.forRoot({ echarts: () => import('echarts') })], providers: [ApiService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
