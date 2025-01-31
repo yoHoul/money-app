@@ -3,9 +3,10 @@ import { IUser, ICard, ICardStory, ICategories } from 'src/app/shared/types/i-ca
 import { foregroundColor,backgroundColor,CardLogo } from '../../../assets/styles/categoriesStyles'
 
 @Component({
-  selector: 'app-categories-page',
-  templateUrl: './categories-page.component.html',
-  styleUrls: ['./categories-page.component.scss']
+    selector: 'app-categories-page',
+    templateUrl: './categories-page.component.html',
+    styleUrls: ['./categories-page.component.scss'],
+    standalone: false
 })
 
 export class CategoriesPageComponent implements OnDestroy {
