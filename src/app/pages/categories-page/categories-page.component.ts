@@ -1,6 +1,7 @@
 import { Component, Input, OnDestroy, SimpleChanges } from '@angular/core';
 import { IUser, ICard, ICardStory, ICategories } from 'src/app/shared/types/i-category-card';
 import { foregroundColor,backgroundColor,CardLogo } from '../../../assets/styles/categoriesStyles'
+import { number } from 'echarts';
 
 @Component({
     selector: 'app-categories-page',
@@ -44,7 +45,7 @@ export class CategoriesPageComponent implements OnDestroy {
     for(let record of CardStory) {
       networth += record.value;
     }
-    return networth
+    return Number(networth.toFixed(2))
   }
 
   getCardImg(image: string) {
