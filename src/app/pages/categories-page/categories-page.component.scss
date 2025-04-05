@@ -46,15 +46,15 @@
     justify-content: space-between;
     align-items: center;
     width: 20vh;
-    min-width: 138px;
     height: 25vh;
+    min-width: 138px;
     min-height: 174px;
     border: 3px solid black;
     border-radius: 10%;
 }
 
 .card-title {
-    margin: 0;
+    margin: 5px;
     padding: 0;
     font-size: 20px;
     font-weight: bold;

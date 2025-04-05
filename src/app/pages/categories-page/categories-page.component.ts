@@ -1,7 +1,6 @@
 import { Component, Input, OnDestroy, SimpleChanges } from '@angular/core';
 import { IUser, ICard, ICardStory, ICategories } from 'src/app/shared/types/i-category-card';
 import { foregroundColor,backgroundColor,CardLogo } from '../../../assets/styles/categoriesStyles'
-import { number } from 'echarts';
 
 @Component({
     selector: 'app-categories-page',
