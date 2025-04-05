@@ -18,3 +18,8 @@ export interface ICardStory {
 export interface ICategories extends ICard {
     networth: number;
 }
+
+export interface IChartData {
+    name: string;
+    value: number;
+}
