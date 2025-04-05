@@ -1,1 +1,1 @@
-pivo gamimg
+pivo gaming
