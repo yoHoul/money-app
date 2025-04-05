@@ -9,14 +9,24 @@ import { CategoriesPageComponent } from './pages/categories-page/categories-page
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ApiService } from './core/services/api.service';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { NetworthChartComponent } from './core/components/charts/networthChart/networthChart.component';
 
 @NgModule({ declarations: [
         AppComponent,
         HeaderComponent,
         SidebarComponent,
-        CategoriesPageComponent
+        CategoriesPageComponent,
+        NetworthChartComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [
+        AppComponent
+    ], 
+    imports: [
+        BrowserModule,
         AppRoutingModule,
-        NgxEchartsModule.forRoot({ echarts: () => import('echarts') })], providers: [ApiService, provideHttpClient(withInterceptorsFromDi())] })
+        NgxEchartsModule.forRoot({ echarts: () => import('echarts') })
+    ], 
+    providers: [
+        ApiService, provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
