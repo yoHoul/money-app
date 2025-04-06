@@ -11,7 +11,7 @@ import { ICategories, IChartData } from 'src/app/shared/types/i-category-card';
 export class NetworthChartComponent implements OnInit {
 
   @Input() CategoriesUI: ICategories[] = [];
-  @Input() State!: boolean;
+  @Input() State: boolean = true;
     
   chartData: IChartData[] = [];
   chartOption!: EChartsCoreOption;
@@ -21,11 +21,11 @@ export class NetworthChartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.updateChart()
+    this.updateData(this.CategoriesUI)
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['CategoriesUI'] && this.CategoriesUI?.length) {
+    if (changes['CategoriesUI']) {
       this.updateData(this.CategoriesUI);
     }
     if (changes['State']) {
@@ -34,7 +34,8 @@ export class NetworthChartComponent implements OnInit {
   }
 
   updateData(config: ICategories[]) {
-    this.chartData = config.map(item => ({
+    const curConfig = config.filter((item) => item.Category == this.State)
+    this.chartData = curConfig.map(item => ({
       name: item.CardName,
       value: item.networth,
     }));
