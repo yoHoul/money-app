@@ -38,6 +38,7 @@ export class NetworthChartComponent implements OnInit {
     this.chartData = curConfig.map(item => ({
       name: item.CardName,
       value: item.networth,
+      itemStyle: {color: item.CardColor}
     }));
     this.calcNet(config)
     this.updateChart()
@@ -46,7 +47,7 @@ export class NetworthChartComponent implements OnInit {
   calcNet(data: ICategories[]) {
     this.networth = 0;
     this.netlost = 0;
-    data.map(record => {
+    data.map(record => { //насрал
       if(record.Category == true) {
         this.networth += record.networth
       } else if(record.Category == false){
