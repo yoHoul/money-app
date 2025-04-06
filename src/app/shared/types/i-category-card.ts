@@ -24,4 +24,5 @@ export interface ICategories extends ICard {
 export interface IChartData {
     name: string;
     value: number;
+    itemStyle: {color: string}
 }
