@@ -5,16 +5,18 @@ import { ICategories, IChartData } from 'src/app/shared/types/i-category-card';
 @Component({
   selector: 'app-networthChart',
   templateUrl: './networthChart.component.html',
-  styleUrls: ['./networthChart.component.css'],
+  styleUrls: ['./networthChart.component.scss'],
   standalone: false
 })
 export class NetworthChartComponent implements OnInit {
 
   @Input() CategoriesUI: ICategories[] = [];
+  @Input() State!: boolean;
     
   chartData: IChartData[] = [];
   chartOption!: EChartsCoreOption;
   networth: number = 0;
+  netlost: number = 0;
 
   constructor() { }
 
@@ -26,6 +28,9 @@ export class NetworthChartComponent implements OnInit {
     if (changes['CategoriesUI'] && this.CategoriesUI?.length) {
       this.updateData(this.CategoriesUI);
     }
+    if (changes['State']) {
+      this.updateData(this.CategoriesUI);
+    }
   }
 
   updateData(config: ICategories[]) {
@@ -33,12 +38,20 @@ export class NetworthChartComponent implements OnInit {
       name: item.CardName,
       value: item.networth,
     }));
-    this.calcNetworth(this.chartData)
+    this.calcNet(config)
     this.updateChart()
   }
 
-  calcNetworth(data: IChartData[]) {
-    this.networth = data.reduce((sum, record) => sum + record.value, 0);
+  calcNet(data: ICategories[]) {
+    this.networth = 0;
+    this.netlost = 0;
+    data.map(record => {
+      if(record.Category == true) {
+        this.networth += record.networth
+      } else if(record.Category == false){
+        this.netlost += record.networth
+      }
+    })
   }
 
   updateChart() {
@@ -57,7 +70,9 @@ export class NetworthChartComponent implements OnInit {
             borderWidth: 2
           },
           label: {
-            formatter: `{title|Расходы}\n{value|${this.networth} ₽}`,
+            formatter: `{title|${this.State == true ? "Расходы": "Доходы"}}
+            \n{networth|${this.State == true ? this.networth : this.netlost} ₽}
+            \n{netlost|${this.State == true ? this.netlost : this.networth} ₽}`,
             show: true,
             fontSize: 30,
             position: 'center',
@@ -65,15 +80,20 @@ export class NetworthChartComponent implements OnInit {
               title: {
                 fontSize: 20,
                 fontWeight: 'normal',
-                color: '#999',
+                color: 'grey',
                 align: 'center'
               },
-              value: {
+              networth: {
                 fontSize: 28,
                 fontWeight: 'bold',
-                color: '#333',
+                color: this.State == true ? '#ff0000' : '#09ff00',
                 align: 'center',
-                padding: [4, 0, 0, 0]
+              },
+              netlost: {
+                fontSize: 18,
+                color: this.State == true ? '#8df589' : '#fc5b5b',
+                fontWeight: 'bold',
+                align: 'center',
               }
             }
           },
