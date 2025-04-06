@@ -15,7 +15,7 @@
 
 .date-picker {
     background-color: white;
-    margin: 1vh 0;
+    margin: 1vh 8px;
     border: 3px solid black;
     border-radius: 15px;
     width: 250px;
@@ -37,7 +37,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 20px;
 }
 
 .card-container {
@@ -51,6 +50,11 @@
     min-height: 174px;
     border: 3px solid black;
     border-radius: 10%;
+    margin: 8px;
+}
+
+.add-card {
+    padding: 50px 0 50px 0;
 }
 
 .card-title {
@@ -88,8 +92,8 @@
 .card-button {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    height: 15%;
+    width: 145px;
+    height: 35px;
     margin-bottom: 5%;
     border: 3px solid black;
     border-radius: 15px;
@@ -102,4 +106,10 @@
     padding: 0;
     font-size: 20px;
     font-weight: bold;
+}
+
+.networth-chart {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
 }

@@ -4,6 +4,7 @@ export interface IUser {
 }
 
 export interface ICard {
+    Category: boolean;
     CardName: string;
     CardLogo: string;
     CardColor: string;

@@ -16,6 +16,8 @@ export class CategoriesPageComponent implements OnDestroy {
   walletType: string = '₽';
   CategoriesUI: ICategories[] = [];
   totalSpend: number = 123; //пока не считает, рвани жопа
+  category: boolean = true;
+  state: boolean = true;
 
   constructor() {}
 
@@ -55,6 +57,12 @@ export class CategoriesPageComponent implements OnDestroy {
       background: backgroundColor
     };
     return colorMap[place][color as keyof typeof foregroundColor] ?? foregroundColor.Black;
+  }
+
+  changeCategory() {
+    this.category = !this.category;
+    this.state = !this.state;
+    console.log(this.state)
   }
 
   ngOnDestroy(): void {}
