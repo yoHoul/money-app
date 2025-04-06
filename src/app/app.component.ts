@@ -15,6 +15,7 @@ export class AppComponent {
   Cards: ICard[] = [];
 
   walletType: string = '₽';
+  balance: number = 0;
 
 
   private destroyed$: ReplaySubject<boolean> = new ReplaySubject(1);
@@ -24,7 +25,7 @@ export class AppComponent {
     this.subscription = this.ApiService.getAllCards().pipe(takeUntil(this.destroyed$)).subscribe(
       (res) => {
       this.CategoriesUI = res;
-      this.initData(this.CategoriesUI, 1)
+      this.initData(this.CategoriesUI, 0)
       }
     )
   }
@@ -33,6 +34,7 @@ export class AppComponent {
     this.Cards = config
     .filter((item) => item.id == id)
     .flatMap((item) => item.cards as ICard[]);
+    this.balance = config[id].balance;
   }
 
   ngOnDestroy(): void {

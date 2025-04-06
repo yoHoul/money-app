@@ -1,5 +1,6 @@
 export interface IUser {
     id: number;
+    balance: number;
     cards: ICard[] | null;
 }
 

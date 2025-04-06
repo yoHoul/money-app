@@ -70,7 +70,7 @@ export class NetworthChartComponent implements OnInit {
             borderWidth: 2
           },
           label: {
-            formatter: `{title|${this.State == true ? "Расходы": "Доходы"}}
+            formatter: `{title|${this.State == true ? "Расходы": "Прибыль"}}
             \n{networth|${this.State == true ? this.networth : this.netlost} ₽}
             \n{netlost|${this.State == true ? this.netlost : this.networth} ₽}`,
             show: true,
@@ -78,19 +78,19 @@ export class NetworthChartComponent implements OnInit {
             position: 'center',
             rich: {
               title: {
-                fontSize: 20,
+                fontSize: 28,
                 fontWeight: 'normal',
                 color: 'grey',
                 align: 'center'
               },
               networth: {
-                fontSize: 28,
+                fontSize: 34,
                 fontWeight: 'bold',
                 color: this.State == true ? '#ff0000' : '#09ff00',
                 align: 'center',
               },
               netlost: {
-                fontSize: 18,
+                fontSize: 24,
                 color: this.State == true ? '#8df589' : '#fc5b5b',
                 fontWeight: 'bold',
                 align: 'center',
