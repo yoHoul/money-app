@@ -2,20 +2,27 @@
   
   <div class="networth">
     <div class="networth-top">
-      skibidi
+      <button class="wallet-picker">
+        <img class="wallet-picker-img" src="../../../assets/btnIcons/wallet.svg" alt="">
+        <p class="wallet-picker-text">Все счета</p>
+      </button>
+      <p class="networth-title">Баланс</p>
+      <p class="balance">{{ Balance }} <span class="balance-wallet">₽</span></p>
     </div>
+
     <div 
     class="networth-chart"
     (click)="changeCategory()"
     >
       <app-networthChart [CategoriesUI]="CategoriesUI" [State]="state"></app-networthChart>
     </div>
+
   </div>
 
   <div class="categories">
       <button class="date-picker">
-        <img class="" src="" alt="">
-        <span class="date-picker-text">Месяц</span>
+        <img class="date-picker-img" src="../../../assets/btnIcons/list-icon.svg" alt="">
+        <p class="date-picker-text">Месяц</p>
       </button>
       
     <div class="cards-container">
@@ -28,7 +35,7 @@
             </div>
           </div>
           <div class="card-networth">
-            <span class="networth-title" [ngStyle]="{'color': getColor(categories.CardColor, 'foreground')}"> {{ categories.networth }} {{ walletType }}</span>
+            <span class="networth-title" [ngStyle]="{'color': getColor(categories.CardColor, 'foreground')}"> {{ categories.networth }} {{ WalletType }}</span>
           </div>
           <div class="card-button">
             <p class="button-text">Добавить</p>

@@ -12,10 +12,11 @@ import { foregroundColor,backgroundColor,CardLogo } from '../../../assets/styles
 export class CategoriesPageComponent implements OnDestroy {
   
   @Input() Cards: ICard[] = [];
+  @Input() WalletType: string = '₽';
+  @Input() Balance: number = 0;
 
-  walletType: string = '₽';
+
   CategoriesUI: ICategories[] = [];
-  totalSpend: number = 123; //пока не считает, рвани жопа
   category: boolean = true;
   state: boolean = true;
 
@@ -62,7 +63,6 @@ export class CategoriesPageComponent implements OnDestroy {
   changeCategory() {
     this.category = !this.category;
     this.state = !this.state;
-    console.log(this.state)
   }
 
   ngOnDestroy(): void {}

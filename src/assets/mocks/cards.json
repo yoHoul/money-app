@@ -1,6 +1,7 @@
 [
     {
-    "id": 1,
+    "id": 0,
+    "balance": 1337,
     "cards": [
             {
                 "Category": true,
@@ -104,9 +105,11 @@
         ]
     },
     {
-    "id": 2,
+    "id": 1,
+    "balance": 7331,
     "cards": [
             {
+                "Category": false,
                 "CardName": "Кушанье",
                 "CardLogo": "ForkAndKnife",
                 "CardColor": "Black",
@@ -117,6 +120,7 @@
                   ]
             },
             {
+                "Category": false,
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Red",
@@ -127,6 +131,7 @@
                   ]
             },
             {
+                "Category": false,
                 "CardName": "dopdopes",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
@@ -137,6 +142,7 @@
                   ]
             },
             {
+                "Category": true,
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
@@ -147,6 +153,7 @@
                   ]
             },
             {
+                "Category": false,
                 "CardName": "eshkere",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
@@ -157,6 +164,7 @@
                   ]
             },
             {
+                "Category": true,
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
@@ -167,6 +175,7 @@
                   ]
             },
             {
+                "Category": true,
                 "CardName": "eshkere",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
@@ -177,6 +186,7 @@
                   ]
             },
             {
+                "Category": false,
                 "CardName": "Movie Ticket",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
@@ -187,6 +197,7 @@
                   ]
             },
             {
+                "Category": false,
                 "CardName": "eshkere",
                 "CardLogo": "Ticket",
                 "CardColor": "Blue",
