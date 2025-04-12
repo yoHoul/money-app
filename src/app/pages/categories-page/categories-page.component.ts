@@ -21,6 +21,8 @@ export class CategoriesPageComponent implements OnDestroy {
   state: boolean = true;
   isVisible: boolean = false;
   popupName: string = '';
+  template: 'newRecord' | 'newCategory' = 'newRecord';
+  pickedCategory!: ICard;
 
   constructor() {}
 
@@ -68,13 +70,16 @@ export class CategoriesPageComponent implements OnDestroy {
   }
 
   newRecordPopup(card: ICard) {
-    this.isVisible = !this.isVisible;
+    this.pickedCategory = card;
     this.popupName = `Добавить запись в "${card.CardName}"`;
+    this.template = 'newRecord';
+    this.isVisible = !this.isVisible;
   }
 
-  newCardPopup() {
-    this.isVisible = !this.isVisible;
+  newCategoryPopup() {
     this.popupName = 'Новая категория';
+    this.template = 'newCategory';
+    this.isVisible = !this.isVisible;
   }
 
   ngOnDestroy(): void {}
