@@ -53,12 +53,34 @@
         <div class="card-button">
           <p 
           class="button-text"
-          (click)="newCardPopup()"
-          >Добавить</p>
+          (click)="newCategoryPopup()"
+          >Создать</p>
         </div>
       </div>
 
-      <app-popup-dialog [(isVisible)]="isVisible" [name]="popupName"></app-popup-dialog>
+      <app-popup-dialog [(isVisible)]="isVisible" [name]="popupName" [template]="template">
+        <ng-template #newRecordContent>
+          <div class="temp-container">
+            
+            <div class="card-button">
+              <p 
+              class="button-text"
+              >Добавить</p>
+            </div>
+          </div>
+        </ng-template>
+
+        <ng-template #newCategoryContent>
+          <div class="temp-container">
+
+            <div class="card-button">
+              <p 
+              class="button-text"
+              >Создать</p>
+            </div>
+          </div>
+        </ng-template>
+      </app-popup-dialog>
 
     </div>
   </div>

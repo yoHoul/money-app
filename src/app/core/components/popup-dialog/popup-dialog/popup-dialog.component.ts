@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
+import { Component, ContentChild, EventEmitter, Input, OnInit, Output, SimpleChanges, TemplateRef } from '@angular/core';
 
 @Component({
   selector: 'app-popup-dialog',
@@ -10,7 +10,12 @@ export class PopupDialogComponent implements OnInit{
 
   @Input() isVisible!: boolean;
   @Input() name!: string;
+  @Input() template: 'newRecord' | 'newCategory' = 'newRecord';
+
   @Output() isVisibleChange = new EventEmitter<any>();
+
+  @ContentChild('newRecordContent') newRecord!: TemplateRef<any>;
+  @ContentChild('newCategoryContent') newCategory!: TemplateRef<any>;
 
   constructor() { }
 

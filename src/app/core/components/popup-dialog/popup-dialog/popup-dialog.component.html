@@ -1,5 +1,9 @@
-<div *ngIf="isVisible">
-  <div class="container">
+<div *ngIf="isVisible" class="container">
+  <div 
+  class="container-content"
+  [ngClass]="{
+    'newRecord': template == 'newRecord',
+    'newCategory': template == 'newCategory'}">
     <div class="header">
       <p class="header-name">
         {{ name }}
@@ -11,7 +15,12 @@
       </div>
     </div>
     <main>
-      <ng-container></ng-container>
+      <ng-container *ngIf="template == 'newRecord'">
+        <ng-container *ngTemplateOutlet="newRecord"></ng-container>
+      </ng-container>
+      <ng-container *ngIf="template == 'newCategory'">
+        <ng-container *ngTemplateOutlet="newCategory"></ng-container>
+      </ng-container>
     </main>
   </div>
 </div>
