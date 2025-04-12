@@ -4,9 +4,14 @@
       <p class="header-name">
         {{ name }}
       </p>
-      <div class="header-close">
-        <img src="" alt="" class="close-png">
+      <div class="header-close"
+      (click)="closePopup()"
+      >
+        <img src="../../../../../assets/btnIcons/xmark.svg" alt="" class="close-png">
       </div>
     </div>
+    <main>
+      <ng-container></ng-container>
+    </main>
   </div>
 </div>
