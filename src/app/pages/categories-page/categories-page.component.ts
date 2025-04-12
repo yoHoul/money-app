@@ -68,14 +68,13 @@ export class CategoriesPageComponent implements OnDestroy {
   }
 
   newRecordPopup(card: ICard) {
-    console.log(card)
     this.isVisible = !this.isVisible;
-    this.popupName != 'Добавить запись' ? this.popupName = 'Добавить запись' : this.popupName;
+    this.popupName = `Добавить запись в "${card.CardName}"`;
   }
 
   newCardPopup() {
     this.isVisible = !this.isVisible;
-    this.popupName != 'Новая категория' ? this.popupName = 'Новая категория' : this.popupName;
+    this.popupName = 'Новая категория';
   }
 
   ngOnDestroy(): void {}

@@ -9,7 +9,7 @@ import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@
 export class PopupDialogComponent implements OnInit{
 
   @Input() isVisible!: boolean;
-  @Input() name: string = '';
+  @Input() name!: string;
   @Output() isVisibleChange = new EventEmitter<any>();
 
   constructor() { }
@@ -26,7 +26,6 @@ export class PopupDialogComponent implements OnInit{
   }
 
   initWidget() {
-
   }
 
   closePopup() {
