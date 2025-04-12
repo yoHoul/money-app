@@ -27,8 +27,7 @@ export class NetworthChartComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['CategoriesUI']) {
       this.updateData(this.CategoriesUI);
-    }
-    if (changes['State']) {
+    } else if (changes['State']) {
       this.updateData(this.CategoriesUI);
     }
   }
@@ -49,9 +48,9 @@ export class NetworthChartComponent implements OnInit {
     this.netlost = 0;
     data.map(record => { //насрал
       if(record.Category == true) {
-        this.networth += record.networth
-      } else if(record.Category == false){
         this.netlost += record.networth
+      } else if(record.Category == false){
+        this.networth += record.networth
       }
     })
   }
@@ -73,8 +72,8 @@ export class NetworthChartComponent implements OnInit {
           },
           label: {
             formatter: `{title|${this.State == true ? "Расходы": "Прибыль"}}
-            \n{networth|${this.State == true ? this.networth : this.netlost} ₽}
-            \n{netlost|${this.State == true ? this.netlost : this.networth} ₽}`,
+            \n{networth|${this.State == true ? this.netlost : this.networth} ₽}
+            \n{netlost|${this.State == true ? this.networth : this.netlost} ₽}`,
             show: true,
             fontSize: 30,
             position: 'center',
