@@ -19,6 +19,8 @@ export class CategoriesPageComponent implements OnDestroy {
   CategoriesUI: ICategories[] = [];
   category: boolean = true;
   state: boolean = true;
+  isVisible: boolean = false;
+  popupName: string = '';
 
   constructor() {}
 
@@ -63,6 +65,17 @@ export class CategoriesPageComponent implements OnDestroy {
   changeCategory() {
     this.category = !this.category;
     this.state = !this.state;
+  }
+
+  newRecordPopup(card: ICard) {
+    console.log(card)
+    this.isVisible = !this.isVisible;
+    this.popupName != 'Добавить запись' ? this.popupName = 'Добавить запись' : this.popupName;
+  }
+
+  newCardPopup() {
+    this.isVisible = !this.isVisible;
+    this.popupName != 'Новая категория' ? this.popupName = 'Новая категория' : this.popupName;
   }
 
   ngOnDestroy(): void {}

@@ -10,13 +10,15 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { ApiService } from './core/services/api.service';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NetworthChartComponent } from './core/components/charts/networthChart/networthChart.component';
+import { PopupDialogComponent } from './core/components/popup-dialog/popup-dialog/popup-dialog.component';
 
 @NgModule({ declarations: [
         AppComponent,
         HeaderComponent,
         SidebarComponent,
         CategoriesPageComponent,
-        NetworthChartComponent
+        NetworthChartComponent,
+        PopupDialogComponent
     ],
     bootstrap: [
         AppComponent

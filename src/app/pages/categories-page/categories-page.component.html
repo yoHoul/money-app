@@ -38,7 +38,10 @@
             <span class="networth-title" [ngStyle]="{'color': getColor(categories.CardColor, 'foreground')}"> {{ categories.networth }} {{ WalletType }}</span>
           </div>
           <div class="card-button">
-            <p class="button-text">Добавить</p>
+            <p 
+            class="button-text"
+            (click)="newRecordPopup(categories)"
+            >Добавить</p>
           </div>
         </div>
       </div>
@@ -48,9 +51,14 @@
           <p class="card-title">Новая категория</p>
         </div>
         <div class="card-button">
-          <p class="button-text">Добавить</p>
+          <p 
+          class="button-text"
+          (click)="newCardPopup()"
+          >Добавить</p>
         </div>
       </div>
+
+      <app-popup-dialog [(isVisible)]="isVisible" (name)="popupName"></app-popup-dialog>
 
     </div>
   </div>
